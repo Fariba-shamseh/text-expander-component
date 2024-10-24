@@ -51,10 +51,18 @@ function TextExpander(
     const clickHandler=()=>{
         setIsExpanded(!isExpanded)
     }
+    const buttonStyle={
+        background :"none",
+        border:"none",
+        font:"inherit",
+        cursor:"pointer",
+        marginLeft:"6px",
+        color:buttonColor,
+    }
     return(
         <div className={className}>
             <span>{displayText}</span>
-            <button onClick={clickHandler} >{isExpanded ? collapseButtonText : expandButtonText}  </button>
+            <button onClick={clickHandler} style={buttonStyle} >{isExpanded ? collapseButtonText : expandButtonText}  </button>
         </div>
     )
 }
